@@ -1,6 +1,8 @@
-/* #region FONT IMPORTS */
+/* #region IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 @import url('https://db.onlinewebfonts.com/c/775c3814e9c1f228d495333e07580d59?family=Andy+Bold+V2'); 
+@import url(/styles/parallax.css);
+
 /* #endregion */
 /* #region BASE STYLING */
 :root { /* WHEN RESTYLING THE SITE TO MATCH MAJOR UPDATES, ONLY CHANGE THESE! */
@@ -86,7 +88,7 @@ li > a {
 li::before{
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 75%;
+	background-size: 85%;
 	display: inline-block;
 	height: 35px;
 	width: 35px;
@@ -100,67 +102,15 @@ li.home::before {
 }
 
 li.download::before {
-	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
+	background-image: url('https://modofredemption.wiki.gg/images/Floppy_Disk_3_(1-2).png');
 }
 
 li.discord::before {
-	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
+	background-image: url('https://terraria.wiki.gg/images/thumb/Chat.png/20px-Chat.png');
 }
 
 li.wiki::before {
-	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
-}
-
-/* #endregion */
-/* #region PARRALAX */
-.parallax {
-	position: fixed;
-	inset: 0;
-	z-index: 0;
-}
-
-.layer {
-	position: absolute;
-	inset: 0;
-	overflow: hidden;
-}
-
-.strip {
-	display: flex;
-	height: 100%;
-	animation: scroll var(--duration) linear infinite;
-	transform: translateZ(0);
-}
-
-.strip img {
-	height: 100%;
-	width: auto;
-	flex-shrink: 0;
-}
-
-.far, .mid, .near {
-	--img-width: 162.54vh;
-}
-
-.far  { --duration: 80s; }
-.mid  { --duration: 50s; }
-.near { --duration: 25s; }
-
-@keyframes scroll {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(calc(-1 * var(--img-width)));
-	}
-}
-
-.main-content {
-	position: relative;
-	z-index: 10;
-	min-height: 100vh;
-	padding: 4rem;
-	color: white;
+	background-image: url('https://modofredemption.wiki.gg/images/Forbidden_Ritual.png');
 }
 
 /* #endregion */

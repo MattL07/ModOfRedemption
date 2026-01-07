@@ -1,0 +1,49 @@
+.parallax {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+}
+
+.layer {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+}
+
+.strip {
+	display: flex;
+	height: 100%;
+	animation: scroll var(--duration) linear infinite;
+	transform: translateZ(0);
+}
+
+.strip img {
+	height: 100%;
+	width: auto;
+	flex-shrink: 0;
+}
+
+.far, .mid, .near {
+	--img-width: 162.54vh;
+}
+
+.far  { --duration: 80s; }
+.mid  { --duration: 50s; }
+.near { --duration: 25s; }
+
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-1 * var(--img-width)));
+	}
+}
+
+.main-content {
+	position: relative;
+	z-index: 10;
+	min-height: 100vh;
+	padding: 4rem;
+	color: white;
+}
