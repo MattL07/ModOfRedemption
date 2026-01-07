@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://db.onlinewebfonts.com/c/775c3814e9c1f228d495333e07580d59?family=Andy+Bold+V2'); 
+
+:root { /* WHEN RESTYLING THE SITE TO MATCH MAJOR UPDATES, ONLY CHANGE THESE! */
+	--background-image-url: url('https://modofredemption.wiki.gg/images/RKBackground.png');
+	--logo-glow: rgb(94, 30, 9);
+	--tabs-color: grey;
+	--tabs-hover-color: white;
+}
+
+body {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.4) 100%), var(--background-image-url);
+	background-color: rgba(0, 0, 0, 0.6);
+	background-clip: border-box;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	width: 800px;
+}
+
+nav {
+	width: 100%;
+}
+
+ul {
+	display: flex;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+	padding-left: 0;
+	justify-content: center;
+	gap: 40px;
+}
+
+li {
+	display: inline-flex;
+	color: var(--tabs-color);
+	font-family: "Jersey 10", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+	height: 35px;
+	transition: 0.1s ease-in-out;
+}
+
+li:hover {
+	color: var(--tabs-hover-color);
+	scale: 1.2;
+}
+
+li > a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.logo {
+	background-position: center;
+	display: block;
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 20px;
+	box-sizing: content-box;
+	filter: drop-shadow(0 0 15px var(--logo-glow));
+	animation: tilt 3s infinite alternate-reverse ease-in-out;
+}
+
+/* #region LIST DECORATORS */
+li::before{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 75%;
+	display: inline-block;
+	height: 35px;
+	width: 35px;
+	visibility: visible;
+	content: "";
+	margin-right: 5px;
+}
+
+li.home::before {
+	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
+}
+
+li.download::before {
+	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
+}
+
+li.discord::before {
+	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
+}
+
+li.wiki::before {
+	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
+}
+
+/* #endregion */
+/* #region ANIMATIONS */
+@keyframes tilt {
+	0% { rotate: 3deg; }
+	100% { rotate: -3deg; }
+}
+/* #endregion */
