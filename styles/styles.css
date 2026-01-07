@@ -45,8 +45,9 @@ li {
 	font-family: "Jersey 10", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 35px;
+	font-size: 40px;
 	height: 35px;
+	line-height: 35px;
 	transition: 0.1s ease-in-out;
 }
 
@@ -109,59 +110,56 @@ li.wiki::before {
 
 /* #endregion */
 /* #region PARRALAX */
-.parralax {
-	height: 100%;
-	width: 100vw;
+.parallax {
+	position: fixed;
+	inset: 0;
 	z-index: 0;
 }
 
 .layer {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200%;
+	inset: 0;
+	overflow: hidden;
+}
+
+.strip {
+	display: flex;
 	height: 100%;
-	background-repeat: repeat-x;
-	background-position: 0 0;
-	background-size: auto 100%;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	will-change: transform;
-	z-index: 0;
+	animation: scroll var(--duration) linear infinite;
+	transform: translateZ(0);
 }
 
-.layer-back {
-	background-image: url("assets/parralax/ParralaxFar.png");
-	animation: move-back 60s linear infinite;
-	z-index: 0;
+.strip img {
+	height: 100%;
+	width: auto;
+	flex-shrink: 0;
 }
 
-.layer-mid {
-	background-image: url("assets/parralax/ParralaxMid.png");
-	animation: move-mid 40s linear infinite;
-	z-index: 1;
+.far, .mid, .near {
+	--img-width: 162.54vh;
 }
 
-.layer-front {
-	background-image: url("assets/parralax/ParralaxNear.png");
-	animation: move-front 20s linear infinite;
-	z-index: 2;
+.far  { --duration: 80s; }
+.mid  { --duration: 50s; }
+.near { --duration: 25s; }
+
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-1 * var(--img-width)));
+	}
 }
 
-@keyframes move-back {
-	from { transform: translateX(0); }
-	to   { transform: translateX(-50%); }
+.main-content {
+	position: relative;
+	z-index: 10;
+	min-height: 100vh;
+	padding: 4rem;
+	color: white;
 }
 
-@keyframes move-mid {
-	from { transform: translateX(0); }
-	to   { transform: translateX(-50%); }
-}
-
-@keyframes move-front {
-	from { transform: translateX(0); }
-	to   { transform: translateX(-50%); }
-}
 /* #endregion */
 /* #region ANIMATIONS */
 @keyframes tilt {
