@@ -131,19 +131,19 @@ li.wiki::before {
 }
 
 .layer-back {
-	background-image: url("/assets/parralax/ParralaxFar.png");
+	background-image: url("assets/parralax/ParralaxFar.png");
 	animation: move-back 60s linear infinite;
 	z-index: 0;
 }
 
 .layer-mid {
-	background-image: url("/assets/parralax/ParralaxMid.png");
+	background-image: url("assets/parralax/ParralaxMid.png");
 	animation: move-mid 40s linear infinite;
 	z-index: 1;
 }
 
 .layer-front {
-	background-image: url("/assets/parralax/ParralaxNear.png");
+	background-image: url("assets/parralax/ParralaxNear.png");
 	animation: move-front 20s linear infinite;
 	z-index: 2;
 }
