@@ -2,30 +2,27 @@
 @import url('https://db.onlinewebfonts.com/c/775c3814e9c1f228d495333e07580d59?family=Andy+Bold+V2'); 
 
 :root { /* WHEN RESTYLING THE SITE TO MATCH MAJOR UPDATES, ONLY CHANGE THESE! */
-	--background-image-url: url('https://modofredemption.wiki.gg/images/RKBackground.png');
 	--logo-glow: rgb(94, 30, 9);
 	--tabs-color: grey;
 	--tabs-hover-color: white;
 }
 
 body {
-	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.4) 100%), var(--background-image-url);
-	background-color: rgba(0, 0, 0, 0.6);
-	background-clip: border-box;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #000;
 	height: 100vh;
 	width: 100vw;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
 main {
-	display: block;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
 	height: 100%;
-	margin: 0 auto;
-	width: 800px;
+	width: 100%;
+	z-index: 10;
 }
 
 nav {
@@ -66,12 +63,19 @@ li > a {
 .logo {
 	background-position: center;
 	display: block;
-	width: 75%;
+	width: 500px;
 	margin: 0 auto;
 	padding-top: 20px;
 	box-sizing: content-box;
 	filter: drop-shadow(0 0 15px var(--logo-glow));
 	animation: tilt 3s infinite alternate-reverse ease-in-out;
+}
+
+.main-container {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.0) 100%);
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
 }
 
 /* #region LIST DECORATORS */
@@ -103,6 +107,61 @@ li.wiki::before {
 	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
 }
 
+/* #endregion */
+/* #region PARRALAX */
+.parralax {
+	height: 100%;
+	width: 100vw;
+	z-index: 0;
+}
+
+.layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	background-size: auto 100%;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	will-change: transform;
+	z-index: 0;
+}
+
+.layer-back {
+	background-image: url("/assets/parralax/ParralaxFar.png");
+	animation: move-back 60s linear infinite;
+	z-index: 0;
+}
+
+.layer-mid {
+	background-image: url("/assets/parralax/ParralaxMid.png");
+	animation: move-mid 40s linear infinite;
+	z-index: 1;
+}
+
+.layer-front {
+	background-image: url("/assets/parralax/ParralaxNear.png");
+	animation: move-front 20s linear infinite;
+	z-index: 2;
+}
+
+@keyframes move-back {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
+
+@keyframes move-mid {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
+
+@keyframes move-front {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
 /* #endregion */
 /* #region ANIMATIONS */
 @keyframes tilt {
