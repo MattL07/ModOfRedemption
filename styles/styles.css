@@ -85,7 +85,7 @@ li > a {
 }
 /* #endregion */
 /* #region LIST DECORATORS */
-li::before{
+.nav-link::before{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 85%;
@@ -95,21 +95,22 @@ li::before{
 	visibility: visible;
 	content: "";
 	margin-right: 5px;
+	image-rendering: pixelated;
 }
 
-li.home::before {
+.nav-link.home::before {
 	background-image: url('https://modofredemption.wiki.gg/images/Redemption_Icon.png');
 }
 
-li.download::before {
+.nav-link.download::before {
 	background-image: url('https://modofredemption.wiki.gg/images/Floppy_Disk_3_(1-2).png');
 }
 
-li.discord::before {
+.nav-link.discord::before {
 	background-image: url('https://terraria.wiki.gg/images/thumb/Chat.png/20px-Chat.png');
 }
 
-li.wiki::before {
+.nav-link.wiki::before {
 	background-image: url('https://modofredemption.wiki.gg/images/Forbidden_Ritual.png');
 }
 
