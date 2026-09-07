@@ -1,11 +1,30 @@
-<!-- Load Marked.js to turn Markdown into HTML -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
-<script src="../scripts/post.js" defer></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/blog.css">
+</head>
+<body>
+  <main class="blog-page">
+    <header class="blog-header">
+      <a href="../index.html">Mod of Redemption</a>
+      <nav aria-label="Blog navigation">
+        <a href="./">Blog</a>
+        <a href="admin/">Admin</a>
+      </nav>
+    </header>
+    <article class="post-container">
+    <h1 id="post-title">Loading...</h1>
+    <p id="post-date" class="date-badge"></p>
+    <div id="post-body"></div>
+    </article>
+  </main>
 
-<main class="mod-blog-container">
-  <img id="post-hero" src="" />
-  <h1 id="post-title">Loading...</h1>
-  <div id="post-date"></div>
-  <div id="post-content"></div>
-</main>
-
+  <!-- External Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script src="../scripts/post.js" defer></script>
+</body>
+</html>

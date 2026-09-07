@@ -40,11 +40,3 @@
 		transform: translateX(calc(-1 * var(--img-width)));
 	}
 }
-
-.main-content {
-	position: relative;
-	z-index: 10;
-	min-height: 100vh;
-	padding: 4rem;
-	color: white;
-}

@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Mod of Redemption - Home</title>
-		<link href="./styles/styles.css" rel="stylesheet" type="text/css">
-		<link rel="icon" href="https://modofredemption.wiki.gg/images/Site-favicon.ico?2eb2fd">
-		<link rel="apple-touch-icon" href="https://modofredemption.wiki.gg/images/Site-favicon.ico">
-		<link rel="shortcut icon" href="https://modofredemption.wiki.gg/images/Site-favicon.ico?2eb2fd">
-	</head>
-	<body>
-		<div class="parallax">
-			<div class="layer far">
-				<div class="strip">
-					<img src="assets/parallax/ParallaxFar.png">
-					<img src="assets/parallax/ParallaxFar.png">
-					<img src="assets/parallax/ParallaxFar.png">
-				</div>
-			</div>
-			<div class="layer mid">
-				<div class="strip">
-					<img src="assets/parallax/ParallaxMid.png">
-					<img src="assets/parallax/ParallaxMid.png">
-					<img src="assets/parallax/ParallaxMid.png">
-				</div>
-			</div>
-			<div class="layer near">
-				<div class="strip">
-					<img src="assets/parallax/ParallaxNear.png">
-					<img src="assets/parallax/ParallaxNear.png">
-					<img src="assets/parallax/ParallaxNear.png">
-				</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mod of Redemption - Home</title>
+	<link href="./styles/styles.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="https://modofredemption.wiki.gg/images/Site-favicon.ico?2eb2fd">
+	<link rel="apple-touch-icon" href="https://modofredemption.wiki.gg/images/Site-favicon.ico">
+	<link rel="shortcut icon" href="https://modofredemption.wiki.gg/images/Site-favicon.ico?2eb2fd">
+</head>
+
+<body>
+	<div class="parallax">
+		<div class="layer far">
+			<div class="strip">
+				<img src="./assets/parallax/ParallaxFar.png" alt="">
+				<img src="./assets/parallax/ParallaxFar.png" alt="">
+				<img src="./assets/parallax/ParallaxFar.png" alt="">
 			</div>
 		</div>
-		<main>
-			<div class="main-container">
+		<div class="layer mid">
+			<div class="strip">
+				<img src="./assets/parallax/ParallaxMid.png" alt="">
+				<img src="./assets/parallax/ParallaxMid.png" alt="">
+				<img src="./assets/parallax/ParallaxMid.png" alt="">
+			</div>
+		</div>
+		<div class="layer near">
+			<div class="strip">
+				<img src="./assets/parallax/ParallaxNear.png" alt="">
+				<img src="./assets/parallax/ParallaxNear.png" alt="">
+				<img src="./assets/parallax/ParallaxNear.png" alt="">
+			</div>
+		</div>
+	</div>
+	<main>
+		<div class="content-container">
+			<header>
 				<h1 class="title">
-					<a href="./">
-						<img class="logo" src="https://modofredemption.wiki.gg/images/Site-logo.png" alt="Mod of Redemption - Home">
+					<a href="./index.html">
+						<img class="logo" src="https://modofredemption.wiki.gg/images/Site-logo.png"
+							alt="Mod of Redemption - Home">
 					</a>
 				</h1>
-				<nav>
+				<nav aria-label="Primary navigation">
 					<ul class="navbar-list">
 						<li class="nav-link home"><a href="./index.html">Home</a></li>
-						<li class="nav-link blog"><a href="./blog/">Blog</a></li>
-						<li class="nav-link download"><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2893332653">Download</a></li>
+						<li class="nav-link blog"><a href="./blog/index.html">Blog</a></li>
+						<li class="nav-link download"><a
+								href="https://steamcommunity.com/sharedfiles/filedetails/?id=2893332653">Download</a></li>
 						<!-- <li class="nav-link discord"><a href="https://discord.com/invite/VNneR3U">Discord</a></li> -->
 						<li class="nav-link wiki"><a href="https://modofredemption.wiki.gg/">Wiki</a></li>
 					</ul>
 				</nav>
-				<div class="main-content">
-					<p>
-						Mod of Redemption, the remastered version of the now discontinued Mod of Randomness, is a large-scale content mod that adds a wide variety of content into Terraria at all points of the game. This includes many challenging bosses, the mysterious Abandoned Laboratory dungeon, and much more!
-					</p>
-					<iframe class="teaser-embed" src="https://www.youtube-nocookie.com/embed/B9QoRHbxX3I?si=Cs8PNp5M9_tMJ78N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				</div>
-			</div>
-		</main>
-	</body>
+			</header>
+			<hr>
+			<article class="main-content">
+				<p>
+					Mod of Redemption, the remastered version of the now discontinued Mod of Randomness, is a
+					large-scale content mod that adds a wide variety of content into Terraria at all points of the game.
+					This includes many challenging bosses, the mysterious Abandoned Laboratory dungeon, and much more!
+				</p>
+				<iframe class="teaser-embed"
+					src="https://www.youtube-nocookie.com/embed/B9QoRHbxX3I?si=Cs8PNp5M9_tMJ78N"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+				</iframe>
+			</article>
+			<hr>
+			<footer class="site-footer">
+				<p>Mod of Redemption community site.</p>
+			</footer>
+		</div>
+	</main>
+	<script src="../scripts/feed.js" defer></script>
+</body>
+
 </html>
