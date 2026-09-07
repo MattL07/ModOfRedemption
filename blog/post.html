@@ -1,5 +1,6 @@
 <!-- Load Marked.js to turn Markdown into HTML -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+<script src="../scripts/post.js" defer></script>
 
 <main class="mod-blog-container">
   <img id="post-hero" src="" />
@@ -8,14 +9,3 @@
   <div id="post-content"></div>
 </main>
 
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const slug = urlParams.get('slug');
-
-  fetch(`./posts/${slug}.md`)
-    .then(res => res.text())
-    .then(markdownText => {
-      // Separate Sveltia metadata (frontmatter) from body content if needed
-      document.getElementById('post-content').innerHTML = marked.parse(markdownText);
-    });
-</script>

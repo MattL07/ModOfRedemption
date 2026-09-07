@@ -2,10 +2,10 @@
 
 backend:
   name: github
-  repo: MattL07/ModOfRedepmtion
+  repo: MattL07/ModOfRedemption
 
-media_folder: /blog/media
-public_folder: /blog
+media_folder: "blog/media"
+public_folder: "/blog/media"
 
 collections:
   - name: "posts"
