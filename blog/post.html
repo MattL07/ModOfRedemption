@@ -12,7 +12,7 @@
   const urlParams = new URLSearchParams(window.location.search);
   const slug = urlParams.get('slug');
 
-  fetch(`/blog/posts/${slug}.md`)
+  fetch(`./posts/${slug}.md`)
     .then(res => res.text())
     .then(markdownText => {
       // Separate Sveltia metadata (frontmatter) from body content if needed
