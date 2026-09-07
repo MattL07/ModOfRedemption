@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Populate Page Elements
     document.getElementById('post-title').innerText = metadata.title || 'Untitled';
-    document.getElementById('post-date').innerText = metadata.date || '';
+    const dateElement = document.getElementById('post-date');
+    dateElement.innerText = metadata.date || '';
+    dateElement.dateTime = metadata.date || '';
 
     // Render Markdown Body to HTML
     const markdownBody = parts.slice(2).join('---');
