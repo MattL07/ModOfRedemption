@@ -1,16 +1,19 @@
 /* #region IMPORTS */
 @import url('./parallax.css');
-@import url('https://db.onlinewebfonts.com/c/775c3814e9c1f228d495333e07580d59?family=Andy+Bold+V2'); 
+@import url('https://db.onlinewebfonts.com/c/775c3814e9c1f228d495333e07580d59?family=Andy+Bold+V2');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap'); */
 
 /* #endregion */
 
 /* #region COLOR VARIABLES */
 :root { /* WHEN RESTYLING THE SITE TO MATCH MAJOR UPDATES, ONLY CHANGE THESE! */
-	--theme-title-text: goldenrod;
 	--theme-primary: #ae3711;
 	--theme-secondary: #611e09;
 	--logo-glow: var(--theme-primary);
+	--theme-title-text: goldenrod;
+	--text-normal: white;
+	--text-muted: lightgray;
 	--tabs-color: lightgray;
 	--tabs-hover-color: white;
 	--logo-width: 406px; /* WIDTH OF THE CURRENT THEME'S LOGO */
@@ -38,11 +41,98 @@ main {
 	overflow: scroll;
 }
 
-/* #endregion */
-/* #region CLASS STYLING */
+/* FONT SETTING */
+h1, h2, h3, h4, h5, h6, span, div {
+	font-family: "Andy Bold V2", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+p, ul, ol, li {
+	font-size: 16px;
+	font-family: "Inter", sans-serif;
+}
+
+code, pre {
+	font-family: "Courier New", monospace;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.4;
+}
 
 h1 {
-	margin: 0;
+	margin: 20px 0;
+	margin-bottom: 10px;
+	color: var(--theme-title-text);
+	font-size: 36px;
+	min-height: 36px;
+}
+
+h2 {
+	margin: 20px 0;
+	margin-bottom: 10px;
+	color: var(--theme-title-text);
+	font-size: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+h3 {
+	margin: 20px 0;
+	margin-bottom: 10px;
+	color: var(--theme-title-text);
+	font-size: 24px;
+	height: 24px;
+	line-height: 24px;
+}
+
+p {
+	color: var(--text-normal);
+	font-size: 16px;
+	margin: 20px 0;
+}
+
+img {
+	display: block;
+	max-width: 80%;
+	height: auto;
+	margin: 0 auto;
+
+}
+
+img + em { /* Caption hack */
+	color: var(--text-muted);
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+pre {
+	font-size: 16px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	margin: 20px 50px;
+	border: 2px solid var(--theme-primary);
+	border-radius: 5px;
+	padding: 10px 20px;
+	line-height: 16px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+ul, ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin: initial;
+}
+
+
+s, del {
+	text-decoration: line-through;
+	text-decoration-thickness: 2px;
 }
 
 .logo {
@@ -61,7 +151,6 @@ h1 {
 
 .content-container {
 	color: white;
-	font-family: "Andy Bold V2", Arial, Helvetica, sans-serif;
 	max-width: 1000px;
 	margin: 0 auto;
 }
@@ -87,25 +176,32 @@ nav {
 .nav-link {
 	display: inline-flex;
 	color: var(--tabs-color);
-	font-family: "Andy Bold V2", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 40px;
-	height: 35px;
-	line-height: 35px;
+	font-family: "Andy Bold V2", sans-serif;
+	font-size: 30px;
+	height: 30px;
+	line-height: 30px;
 	transition: 0.1s ease-in-out;
+	align-items: center;
 }
 
 .nav-link:hover {
 	color: var(--tabs-hover-color);
 	scale: 1.05;
 	text-shadow: 2px 2px 4px rgba(0,0,20,0.9), 0 0 14px rgba(255,255,255,0.95), 0 0 36px rgba(200,220,255,0.65);
+	text-decoration: underline;
 }
 
 .nav-link > a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.selected {
+	text-decoration: underline;
+}
+
 .nav-link::before{
 	background-repeat: no-repeat;
 	background-position: center;
@@ -147,8 +243,10 @@ nav {
 	font-size: 30px;
 	line-height: 1.1;
 	min-height: fit-content;
-	padding: 0;
+	padding: 0 30px;
 	border: 2px solid var(--theme-primary);
+	border-radius: 10px;
+	margin-bottom: 50px;
 	box-shadow: 
     0 0 5px var(--theme-secondary),
     0 0 10px var(--theme-secondary),
@@ -157,70 +255,87 @@ nav {
 }
 
 .blurb {
-	margin: 30px;
-	font-size: 24px;
+	margin: 20px 0;
+	font-size: 20px;
 }
 
-h2 {
-	margin: 20px 30px;
-	color: var(--theme-title-text);
-	font-family: "Andy Bold V2", sans-serif;
-	font-size: 36px;
-	height: 36px;
+/* #region BLOG POST LIST */
+.post-card {
+	margin: 20px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
-/* #region BLOG STYLING */
-.blog-card {
-	margin: 20px 30px;
-}
-
-.post-excerpt {
-	margin: 10px 0;
-	font-family: "Andy Bold V2", sans-serif;
-	font-size: 22px;
-	color: lightgray;
-	margin-left: 10px;
-}
-
-.card-details {
+.post-card-body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	height: 30px;
+	gap: 20px;
 }
 
-.card-details > h2 {
+.post-card-details {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	box-sizing: border-box;
+	font-family: "Andy Bold V2", sans-serif;
+	min-height: 30px;
+	height: auto;
+	gap: 15px;
+}
+
+.post-excerpt {
+	margin: 0;
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	color: var(--text-muted);
+	margin-left: 10px;
+}
+
+.post-card-title {
+	height: 30px;
 	font-size: 30px;
-	color: white;
+	color: var(--theme-title-text);
 	margin: 0;
 }
 
-.card-details > h2 > a {
+.post-card-details > h2 > a {
 	color: inherit;
 	text-decoration: none;
 	transition: 0.1s ease-in-out;
-	margin-right: 10px;
 }
 
-.card-details > h2 > a:hover {
+.post-card-details > h2 > a:hover {
 	color: var(--theme-title-text);
 	text-decoration: underline;
 	text-shadow: 2px 2px 4px rgba(0,0,20,0.9), 0 0 14px rgba(255,255,255,0.95), 0 0 36px rgba(200,220,255,0.65);
 }
 
-.post-date {
+.post-info {
 	font-size: 18px;
-	color: lightgray;
+	font-family: "Andy Bold V2", sans-serif;
+	color: var(--text-muted);
+	margin: 0;
 	margin-left: 10px;
+}
+
+.post-card-thumbnail {
+	width: 180px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 
+	0 0 5px var(--theme-secondary),
+	0 0 10px var(--theme-secondary),
+	0 0 20px var(--theme-secondary),
+	0 0 40px var(--theme-secondary);
 }
 
 .post-content {
 	font-size: 20px;
 	line-height: 1.6;
-}
-
-.post-content #post-body {
-	font-family: Georgia, serif;
 }
 
 .post-content #post-body img {
@@ -260,7 +375,7 @@ footer > p {
 /* #endregion */
 
 hr {
-	margin: 0 30px;
+	margin: 0;
 	border: none;
 	height: 2px;
 	background-color: var(--theme-primary);
@@ -277,3 +392,22 @@ hr {
 	100% { rotate: -3deg; }
 }
 /* #endregion */
+
+@media (max-width: 1000px) {
+	.main-content {
+		border-left: none;
+		border-right: none;
+		border-radius: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.post-card {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.post-card-thumbnail {
+		display: none;
+	}
+}
