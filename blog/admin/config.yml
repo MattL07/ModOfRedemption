@@ -3,7 +3,6 @@
 backend:
   name: github
   repo: mattl07/ModOfRedemption
-  branch: main
 
 media_folder: "blog/media"
 public_folder: "/blog/media"
