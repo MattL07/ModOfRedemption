@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
 
 backend:
-  name: github
-  repo: MattL07/ModOfRedemption
+  name: MattL07
+  repo: ModOfRedemption
 
 media_folder: "blog/media"
 public_folder: "/blog/media"
