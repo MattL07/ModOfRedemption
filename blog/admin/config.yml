@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: MattL07/ModOfRedemption
+  repo: ModOfRedemption
 
 media_folder: "blog/media"
 public_folder: "/blog/media"
