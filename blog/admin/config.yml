@@ -4,8 +4,6 @@ backend:
   name: github
   repo: mattl07/ModOfRedemption
   branch: main
-  site_domain: mattl07.github.io
-  base_url: https://sveltia-cms-auth.sveltia.workers.dev
 
 media_folder: "blog/media"
 public_folder: "/blog/media"
