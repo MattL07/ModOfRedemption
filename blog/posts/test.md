@@ -1,39 +1,40 @@
 ---
-title: "Nostrud cillum mollit in ex cupidatat minim fugiat ad deserunt anim officia ea."
+title: Nostrud cillum mollit in ex cupidatat minim fugiat ad deserunt anim officia ea.
+date: 2026-09-07
 author: Sneaklone
-date: "2026-09-07"
-thumbnail: "https://picsum.photos/800/450"
-excerpt: "Nostrud cillum mollit in ex cupidatat minim fugiat ad deserunt anim officia ea. Ad non ad et quis cupidatat Lorem. Ut duis non officia sint excepteur irure ipsum ut minim ut. Id laboris magna aliqua dolore id veniam minim ipsum in esse exercitation deserunt."
+excerpt: Nostrud cillum mollit in ex cupidatat minim fugiat ad deserunt anim officia ea. Ad non ad et quis cupidatat Lorem. Ut duis non officia sint excepteur irure ipsum ut minim ut. Id laboris magna aliqua dolore id veniam minim ipsum in esse exercitation deserunt.
+thumbnail: https://picsum.photos/800/450
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
 
-This sentence demonstrates **bold text for emphasis**, *italicized text for tone*, and ***combined bold-italic text***. You can also test ~~strikethrough text~~ or `inline code snippets` within normal paragraph text.
+This sentence demonstrates **bold text for emphasis**, _italicized text for tone_, and **_combined bold-italic text_**. You can also test ~~strikethrough text~~ or `inline code snippets` within normal paragraph text.
 
----
+***
 
 ## Heading 2: Media & Imagery Test
 
 When embedding media, images should properly scale within the main article column.
 
-![Terraria Mod Concept Art](https://picsum.photos/700/350)
-*Figure 1: Sample image caption detailing early development concept art.*
+![Terraria Mod Concept Art](https://picsum.photos/700/350 "Hello")
+
+_Figure 1: Sample image caption detailing early development concept art._
 
 Here is a standard text link to test anchor hover colors: [Visit the Terraria Wiki](https://terraria.wiki.gg/) for reference guides.
 
----
+***
 
 ## Heading 2: Typography & Lists
 
 ### Heading 3: Unordered List (Features & Mod Items)
 
 * **Custom Weapon Tier**
-  * Fire Damage: 45
-  * Knockback: Moderate
-  * Mana Cost: 12
+    * Fire Damage: 45
+    * Knockback: Moderate
+    * Mana Cost: 12
 * **Custom Biome Mechanics**
-  * Environmental hazard debuffs
-  * Unique ambient soundtrack tracks
+    * Environmental hazard debuffs
+    * Unique ambient soundtrack tracks
 * **Town NPC Adjustments**
 
 ### Heading 3: Ordered List (Installation Steps)
@@ -42,15 +43,15 @@ Here is a standard text link to test anchor hover colors: [Visit the Terraria Wi
 2. Open your local `Documents/My Games/Terraria/tModLoader/Mods` folder.
 3. Drop the compiled file into the directory and launch tModLoader.
 
----
+***
 
 ## Heading 2: Blockquotes & Callouts
 
 > "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante."
-> 
-> — *Developer Quote or Excerpt Name*
+>
+> — _Developer Quote or Excerpt Name_
 
----
+***
 
 ## Heading 2: Code Snippets & Syntax
 
@@ -82,3 +83,4 @@ namespace RedemptionMod.Items
         }
     }
 }
+```
